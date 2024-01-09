@@ -1,0 +1,17 @@
+application: shigure-155305
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+  
+- url: (.*)/
+  static_files: public\1/index.html
+  upload: public/index.php
+
+- url: /
+  static_dir: public
